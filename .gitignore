@@ -1,0 +1,6 @@
+node_modules/
+vendor/
+dist/
+mix-manifest.json
+composer.lock
+package-lock.json
