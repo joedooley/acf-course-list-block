@@ -7,7 +7,7 @@
  * Author URI:   https://developingdesigns.com/
  * Version:      1.0.0
  * Tested up to: 5.2.2
- * Text Domain:  acf-hero-section
+ * Text Domain:  acf-course-list-block
  * Domain Path:  /lang
  *
  * @package     DevDesigns\AcfCourseListBlock
@@ -34,18 +34,6 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  *
  * @since 1.0.0
  */
-if ( function_exists( 'DevDesigns\AcfHeroSection\defineConstants' ) ) {
+if ( function_exists( 'DevDesigns\AcfCourseListBlock\defineConstants' ) ) {
 	defineConstants( '1.0.0', __FILE__ );
 }
-
-
-/**
- * Bootstrap plugin.
- *
- * @since 1.0.0
- */
-add_action( 'plugins_loaded', function (): void {
-	add_action( 'wp_enqueue_scripts', 'DevDesigns\PluginStarter\Assets\Enqueue::enqueue', 999 );
-} );
-
-
