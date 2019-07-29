@@ -1,6 +1,6 @@
 {
-	"name": "devdesigns/plugin-starter",
-	"description": "WordPress starter plugin utilizing webpack and composer autoloading.",
+	"name": "devdesigns/acf-course-list-block",
+	"description": "Adds a gutenberg block to display videos within a course.",
 	"type": "wordpress-plugin",
 	"homepage": "https://developingdesigns.com/",
 	"license": "GPL-3.0-only",
@@ -18,6 +18,12 @@
 			"role": "Company"
 		}
 	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"config": {
@@ -25,14 +31,27 @@
 		"preferred-install": "dist",
 		"sort-packages": true
 	},
+	"require-dev": {
+		"kint-php/kint": "^3.2"
+	},
 	"require": {
-		"php": "^7.2",
+		"php": "^7.3",
 		"composer/installers": "~1.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"DevDesigns\\PluginStarter\\": "src/"
+			"DevDesigns\\AcfCourseListBlock\\": "src/"
 		},
-		"files": []
+		"files": [ "src/setup.php", "src/Acf/acf.php" ]
+	},
+	"extra": {
+		"installer-paths": {
+			"../../plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"../../mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			]
+		}
 	}
 }

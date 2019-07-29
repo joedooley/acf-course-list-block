@@ -1,16 +1,21 @@
 <?php
 /**
- * Plugin Name: Plugin Starter
- * Description: WordPress starter plugin utilizing webpack and composer autoloading.
- * Version:     1.0.0
- * Author:      Developing Designs
+ * Plugin Name: ACF Course List Block
+ * Plugin URI:   https://developingdesigns.com/
+ * Description: Adds a gutenberg block to display videos within a course.
+ * Author:       Developing Designs
+ * Author URI:   https://developingdesigns.com/
+ * Version:      1.0.0
+ * Tested up to: 5.2.2
+ * Text Domain:  acf-hero-section
+ * Domain Path:  /lang
  *
- * @package     DevDesigns\PluginStarter
+ * @package     DevDesigns\AcfCourseListBlock
  * @author      Developing Designs
  * @since       1.0.0
  */
 
-namespace DevDesigns\PluginStarter;
+use function DevDesigns\AcfCourseListBlock\defineConstants;
 
 
 
@@ -24,27 +29,23 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 }
 
 
-/*
- * Plugin directory.
+/**
+ * Initialize constants.
  *
  * @since 1.0.0
  */
-if ( ! defined( 'PLUGIN_STARTER_VERSION' ) ) {
-	define( 'PLUGIN_STARTER_VERSION', '1.0.0' );
-}
-
-if ( ! defined( 'PLUGIN_STARTER_URL' ) ) {
-	define( 'PLUGIN_STARTER_URL', plugin_dir_url( __FILE__ ) );
+if ( function_exists( 'DevDesigns\AcfHeroSection\defineConstants' ) ) {
+	defineConstants( '1.0.0', __FILE__ );
 }
 
 
-/*
- * Bootstrap plugin files that aren't autoloaded by composer.
+/**
+ * Bootstrap plugin.
  *
  * @since 1.0.0
  */
 add_action( 'plugins_loaded', function (): void {
-	add_action( 'wp_enqueue_scripts', 'DevDesigns\PluginStarter\Assets\Enqueue::enqueue' );
+	add_action( 'wp_enqueue_scripts', 'DevDesigns\PluginStarter\Assets\Enqueue::enqueue', 999 );
 } );
 
 
