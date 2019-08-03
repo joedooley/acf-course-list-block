@@ -1,12 +1,21 @@
+$white: #FFF;
+$black: #000;
+$header: #E15C4D;
+$divider: #DBDBDB;
+
+
+
 .course-list {
 	header {
-		background: #e8e8e8;
-		border-bottom: 1px solid #fff;
+		background: $header;
+		border-bottom: 1px solid $divider;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
 		margin: 0;
 		padding: 10px 16px;
 
 		h2 {
-			color: #333;
+			color: $white;
 			font-size: 18px;
 			font-weight: bold;
 			margin: 0;
@@ -16,16 +25,24 @@
 	}
 
 	.course-module {
+		box-shadow: 0 2px 13px 0 $divider;
 		margin-bottom: 10px;
 	}
 
 	.course {
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid $divider;
+
+		&:last-of-type {
+			h3 {
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+		}
 
 		h3 {
 			align-items: center;
-			background: #f0f0f0;
-			color: #4d4d4d;
+			background: $white;
+			color: $black;
 			display: flex;
 			font-size: 15px;
 			font-weight: 200;
@@ -35,16 +52,16 @@
 			text-align: left;
 
 			&:hover {
-				color: #0f8043;
-				background: #d5ece0;
+				color: $header;
+				background-color: #E0E0E0;
 			}
 
 			> a {
-				color: #4d4d4d;
+				color: $header;
 				text-decoration: none;
 
 				&:hover {
-					color: #0f8043;
+					color: #E0E0E0;
 				}
 			}
 		}
