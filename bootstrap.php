@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: ACF Course List Block
+ * Plugin Name:  ACF Course List Block
  * Plugin URI:   https://developingdesigns.com/
- * Description: Adds a gutenberg block to display videos within a course.
+ * Description:  Adds a gutenberg block to display videos within a course.
  * Author:       Developing Designs
  * Author URI:   https://developingdesigns.com/
  * Version:      1.0.0
