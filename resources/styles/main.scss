@@ -1,11 +1,16 @@
 $white: #FFF;
-$black: #000;
+$black: #333333;
 $header: #E15C4D;
 $divider: #DBDBDB;
 
 
 
 .course-list {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 740px;
+
+
 	header {
 		background: $header;
 		border-bottom: 1px solid $divider;
@@ -25,6 +30,7 @@ $divider: #DBDBDB;
 	}
 
 	.course-module {
+		border-radius: 10px;
 		box-shadow: 0 2px 13px 0 $divider;
 		margin-bottom: 10px;
 	}
@@ -33,6 +39,9 @@ $divider: #DBDBDB;
 		border-bottom: 1px solid $divider;
 
 		&:last-of-type {
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+
 			h3 {
 				border-bottom-left-radius: 10px;
 				border-bottom-right-radius: 10px;

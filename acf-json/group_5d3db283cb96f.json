@@ -3,25 +3,6 @@
     "title": "Block: Course List",
     "fields": [
         {
-            "key": "field_5d4784444a1a4",
-            "label": "Heading",
-            "name": "heading",
-            "type": "text",
-            "instructions": "Section heading",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d3dce9984cb7",
             "label": "Course List",
             "name": "course_list",
@@ -198,5 +179,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564968059
+    "modified": 1565101458
 }
